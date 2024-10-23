@@ -9,4 +9,4 @@ Made by using Godot Engine with gd script, the state machine is created in cb_pl
 The game is not in the file, but it is available on itch.io.
 
 [Corazones](https://modarku.itch.io/corazones) <br>
-*It is playable however bugs are prominent.*
+*It is playable however bugs are prominent. And there's an ending to the game which may be disturbing so player discretion is advised.*
