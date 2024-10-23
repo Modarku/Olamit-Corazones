@@ -1,6 +1,6 @@
 # Olamit-Corazones
 
-A simple demonstration of utilizing finite state machines for dictiating movement mechanics from player inputs and certain conditions.
+A simple demonstration of utilizing finite state machines for dictating movement mechanics from player inputs and certain conditions.
 
 Made by using Godot Engine with gd script, the state machine is created in cb_player.gd file on scripts/characters/cb_player.gd
 
