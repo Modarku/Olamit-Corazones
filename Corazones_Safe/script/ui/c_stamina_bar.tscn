@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgjwk1pt3p3ks"]
+
+[ext_resource type="Texture2D" uid="uid://bq08lnt3t7qcw" path="res://assets/ui/stamina_bar.png" id="1_71l63"]
+
+[node name="TextureProgressBar" type="TextureProgressBar"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.05, 0.05)
+value = 100.0
+fill_mode = 5
+texture_under = ExtResource("1_71l63")
+texture_progress = ExtResource("1_71l63")
+tint_under = Color(0.231373, 0.231373, 0.231373, 0.705882)
+tint_progress = Color(0.423785, 1, 0.525268, 1)

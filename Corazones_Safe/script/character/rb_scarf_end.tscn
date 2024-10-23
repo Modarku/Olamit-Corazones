@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkxprx18xhice"]
+
+[ext_resource type="Texture2D" uid="uid://cjj0alvthffd7" path="res://assets/characters/luca_end_scarf.png" id="1_iqrja"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_73trs"]
+radius = 2.0
+height = 6.0
+
+[node name="ScarfEnd" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 2
+mass = 0.01
+gravity_scale = 0.5
+center_of_mass_mode = 1
+center_of_mass = Vector2(0, 2)
+can_sleep = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iqrja")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_73trs")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://kknos4cdnu5c"]
+
+[ext_resource type="Texture2D" uid="uid://b48p2dl3xor05" path="res://assets/characters/luca_start_scarf.png" id="1_1hdop"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e361t"]
+radius = 2.0
+height = 6.0
+
+[node name="ScarfStart" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 2
+gravity_scale = 0.0
+can_sleep = false
+freeze = true
+freeze_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1hdop")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_e361t")

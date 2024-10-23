@@ -1,0 +1,216 @@
+[gd_scene load_steps=13 format=3 uid="uid://hwv0b5mggatx"]
+
+[ext_resource type="Script" path="res://script/scenes/scene_state_machine.gd" id="1_gnbdh"]
+[ext_resource type="Texture2D" uid="uid://cq4ssag2n4nme" path="res://assets/state_diagram/state_nodes.png" id="1_k8x3i"]
+[ext_resource type="Texture2D" uid="uid://dpfsr2se5loia" path="res://assets/state_diagram/inputs_idle.png" id="2_is1vk"]
+[ext_resource type="Texture2D" uid="uid://cyd2n6wm5askn" path="res://assets/ui/bcakground_paper.png" id="2_tur8y"]
+[ext_resource type="Texture2D" uid="uid://dtejbpr52cstk" path="res://assets/state_diagram/inputs_move.png" id="3_ujcgo"]
+[ext_resource type="Texture2D" uid="uid://dux6sfioxirik" path="res://assets/state_diagram/inputs_jump.png" id="4_xgluh"]
+[ext_resource type="Texture2D" uid="uid://dkujcc6wtb3sj" path="res://assets/state_diagram/inputs_fall.png" id="5_hs7k2"]
+[ext_resource type="Texture2D" uid="uid://bpcymobrljt55" path="res://assets/state_diagram/inputs_fall_fast.png" id="6_ovwwx"]
+[ext_resource type="Texture2D" uid="uid://doi37h7myalbp" path="res://assets/state_diagram/inputs_hold_wall.png" id="7_owcex"]
+[ext_resource type="Texture2D" uid="uid://oikb47vww8l" path="res://assets/state_diagram/inputs_dash.png" id="8_012da"]
+[ext_resource type="Texture2D" uid="uid://cn0i1ofo3vl7d" path="res://assets/state_diagram/states.png" id="10_utyvm"]
+[ext_resource type="Texture2D" uid="uid://bgk6dvkg8gwak" path="res://assets/state_diagram/inputs.png" id="11_0hdrb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_gnbdh")
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -2
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_tur8y")
+
+[node name="Directions" type="Label" parent="."]
+offset_left = 231.0
+offset_top = 13.0
+offset_right = 908.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Hover on the state nodes to view its transition"
+horizontal_alignment = 1
+
+[node name="btn_back" type="Button" parent="."]
+offset_left = 15.0
+offset_top = 16.0
+offset_right = 82.0
+offset_bottom = 50.0
+text = "Back
+"
+
+[node name="StateMachine" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 410.0
+offset_top = 90.0
+offset_right = 1308.0
+offset_bottom = 663.0
+scale = Vector2(0.8, 0.8)
+
+[node name="StateNodes" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_k8x3i")
+
+[node name="InputsIdle" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_is1vk")
+
+[node name="InputsMove" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_ujcgo")
+
+[node name="InputsJump" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_xgluh")
+
+[node name="InputsFall" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_hs7k2")
+
+[node name="InputsFallFast" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_ovwwx")
+
+[node name="InputsHoldWall" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("7_owcex")
+
+[node name="InputsDash" type="TextureRect" parent="StateMachine"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("8_012da")
+
+[node name="StateButtons" type="Node2D" parent="."]
+
+[node name="Idle" type="Control" parent="StateButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 469.0
+offset_top = 300.0
+offset_right = 509.0
+offset_bottom = 340.0
+
+[node name="Move" type="Control" parent="StateButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 471.0
+offset_top = 161.0
+offset_right = 511.0
+offset_bottom = 201.0
+
+[node name="Jump" type="Control" parent="StateButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 712.0
+offset_top = 294.0
+offset_right = 752.0
+offset_bottom = 334.0
+
+[node name="Fall" type="Control" parent="StateButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 930.0
+offset_top = 290.0
+offset_right = 970.0
+offset_bottom = 330.0
+
+[node name="FallFast" type="Control" parent="StateButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 709.0
+offset_top = 428.0
+offset_right = 749.0
+offset_bottom = 468.0
+
+[node name="HoldWall" type="Control" parent="StateButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 933.0
+offset_top = 430.0
+offset_right = 973.0
+offset_bottom = 470.0
+
+[node name="Dash" type="Control" parent="StateButtons"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 928.0
+offset_top = 161.0
+offset_right = 968.0
+offset_bottom = 201.0
+
+[node name="Legend" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 68.0
+offset_right = 117.0
+offset_bottom = 109.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Legend:"
+horizontal_alignment = 1
+
+[node name="States" type="TextureRect" parent="."]
+visible = false
+offset_left = 11.0
+offset_top = 161.0
+offset_right = 471.0
+offset_bottom = 718.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("10_utyvm")
+
+[node name="Inputs" type="TextureRect" parent="."]
+visible = false
+offset_left = 11.0
+offset_top = 162.0
+offset_right = 471.0
+offset_bottom = 719.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("11_0hdrb")
+
+[node name="BtnStates" type="Button" parent="."]
+offset_left = 16.0
+offset_top = 115.0
+offset_right = 86.0
+offset_bottom = 154.0
+text = "States"
+
+[node name="BtnInputs" type="Button" parent="."]
+offset_left = 99.0
+offset_top = 115.0
+offset_right = 169.0
+offset_bottom = 154.0
+text = "Inputs"
+
+[connection signal="pressed" from="btn_back" to="." method="_on_btn_back_pressed"]
+[connection signal="mouse_entered" from="StateButtons/Idle" to="." method="_on_idle_mouse_entered"]
+[connection signal="mouse_exited" from="StateButtons/Idle" to="." method="_on_idle_mouse_exited"]
+[connection signal="mouse_entered" from="StateButtons/Move" to="." method="_on_move_mouse_entered"]
+[connection signal="mouse_exited" from="StateButtons/Move" to="." method="_on_move_mouse_exited"]
+[connection signal="mouse_entered" from="StateButtons/Jump" to="." method="_on_jump_mouse_entered"]
+[connection signal="mouse_exited" from="StateButtons/Jump" to="." method="_on_jump_mouse_exited"]
+[connection signal="mouse_entered" from="StateButtons/Fall" to="." method="_on_fall_mouse_entered"]
+[connection signal="mouse_exited" from="StateButtons/Fall" to="." method="_on_fall_mouse_exited"]
+[connection signal="mouse_entered" from="StateButtons/FallFast" to="." method="_on_fall_fast_mouse_entered"]
+[connection signal="mouse_exited" from="StateButtons/FallFast" to="." method="_on_fall_fast_mouse_exited"]
+[connection signal="mouse_entered" from="StateButtons/HoldWall" to="." method="_on_hold_wall_mouse_entered"]
+[connection signal="mouse_exited" from="StateButtons/HoldWall" to="." method="_on_hold_wall_mouse_exited"]
+[connection signal="mouse_entered" from="StateButtons/Dash" to="." method="_on_dash_mouse_entered"]
+[connection signal="mouse_exited" from="StateButtons/Dash" to="." method="_on_dash_mouse_exited"]
+[connection signal="pressed" from="BtnStates" to="." method="_on_btn_states_pressed"]
+[connection signal="pressed" from="BtnInputs" to="." method="_on_btn_inputs_pressed"]

@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch1gqco06n8pv"]
+
+[ext_resource type="Script" path="res://script/dialogue/dialogue_ui.gd" id="1_mj8hr"]
+[ext_resource type="Texture2D" uid="uid://ngq5yo2do3jq" path="res://assets/dialogue/characters/blair_mad.png" id="2_uu6bd"]
+[ext_resource type="Texture2D" uid="uid://baslu6hul4tdr" path="res://assets/dialogue/dialogue_background.png" id="3_harmv"]
+
+[node name="DialogeUi" type="CanvasLayer"]
+script = ExtResource("1_mj8hr")
+
+[node name="SpriteTexture" type="TextureRect" parent="."]
+offset_left = 6.10352e-05
+offset_top = 54.0
+offset_right = 1536.0
+offset_bottom = 2102.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_uu6bd")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_top = 409.0
+offset_right = 1152.0
+offset_bottom = 694.135
+texture = ExtResource("3_harmv")
+
+[node name="Name" type="Label" parent="."]
+offset_left = 51.0
+offset_top = 503.0
+offset_right = 118.0
+offset_bottom = 545.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Luca"
+
+[node name="Dialogue" type="Label" parent="."]
+offset_left = 65.0
+offset_top = 553.0
+offset_right = 1131.0
+offset_bottom = 612.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "<hello world!>
+<another line>"
+autowrap_mode = 2

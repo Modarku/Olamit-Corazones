@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg0b8c8gyja0r"]
+
+[ext_resource type="Texture2D" uid="uid://b7by7nbflslna" path="res://assets/characters/luca_piece_scarf.png" id="1_526if"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13mfw"]
+radius = 2.0
+height = 6.0
+
+[node name="ScarfPiece" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 2
+mass = 0.01
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_526if")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_13mfw")
