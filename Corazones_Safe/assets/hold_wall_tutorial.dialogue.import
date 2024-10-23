@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dy4f3lrytk0b6"
+path="res://.godot/imported/hold_wall_tutorial.dialogue-1e480e1c0f0b62b9ac208944c7cd454e.tres"
+
+[deps]
+
+source_file="res://assets/hold_wall_tutorial.dialogue"
+dest_files=["res://.godot/imported/hold_wall_tutorial.dialogue-1e480e1c0f0b62b9ac208944c7cd454e.tres"]
+
+[params]
+
+defaults=true

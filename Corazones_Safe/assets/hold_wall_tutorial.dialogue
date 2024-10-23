@@ -1,0 +1,21 @@
+~ tutorial
+
+Blair: [#mood=mad] Hey, don't trample my plants!
+Luca: [#mood=apologetic] Sorry-- just trying to get through this wall to go up.
+Blair: [#mood=sigh] *sigh* When you jump, hold shift until you come in contact with the wall.
+Blair: [#mood=explaining] Don't forget about your grip, bro.
+Blair: [#mood=explaining] Hold onto the wall long enough and you fall.
+Blair: [#mood=pointing up] Hold onto the wall and try to jump to the roof of my house.
+Luca: [#mood=luca_neutral] I see...
+Luca: [#mood=questioning] Is... is that what you always do to go to the city?
+Blair: [#mood=agitated] ...
+Blair: [#mood=blair_neutral] Yes.
+
+=> END
+
+~ success
+
+Luca: [#mood=happy] Nice! Thank you!
+Blair: [#mood=blair_neutral] *sigh* Go fetch me new tomato seeds, will ya?
+
+=> END
